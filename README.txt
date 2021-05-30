@@ -14,3 +14,14 @@ Quick Installation
    config, by adding "structure" at the end of one of the rows of buttons.
 
 
+By Axel Schorcht Thu, Apr 8, 2021, 6:26 PM posted https://moodle.org/plugins/atto_structure comments:
+Hi for all of you trying to get this plugin to work on a current version of moodle and marvinjs:
+1. Download the zip and extract
+2. to resolve the mixed content error (https->http) replace in structure\lib.php line 57 "http://" with "https://"
+3. the name of the marvin scripts are hardcoded, so in order to make the newest version (1.0.0) work replace in the following documents promise-0.1.1.min.js with promise-1.0.0.min.js
+structure\yui\build\moodle-atto_structure-button\moodle-atto_structure-button-debug.js - line 218
+structure\yui\build\moodle-atto_structure-button\moodle-atto_structure-button-min.js - line 1
+structure\yui\build\moodle-atto_structure-button\moodle-atto_structure-button.js - line 215
+structure\yui\src\button\js\button.js - line 216
+4. re-zip the files and install
+5. enjoy!
